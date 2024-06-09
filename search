@@ -1,0 +1,25 @@
+search
+  def search(self, root, key):
+        if not root or root.key == key:
+            return root
+        if root.key < key:
+            return self.search(root.right, key)
+        return self.search(root.left, key)
+    
+    def inorder(self, root):
+        if root:
+            self.inorder(root.left)
+            print(root.key, end=' ')
+            self.inorder(root.right)
+    
+    def preorder(self, root):
+        if root:
+            print(root.key, end=' ')
+            self.preorder(root.left)
+            self.preorder(root.right)
+    
+    def postorder(self, root):
+        if root:
+            self.postorder(root.left)
+            self.postorder(root.right)
+            print(root.key, end=' ')
