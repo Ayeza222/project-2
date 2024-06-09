@@ -1,0 +1,29 @@
+display code
+if __name__ == "__main__":
+    avl = AVLTree()
+    root = None
+    
+    keys = [9, 5, 10, 0, 6, 11, -1, 1, 2]
+    
+    for key in keys:
+        root = avl.insert(root, key)
+    
+    print("Inorder traversal of the AVL tree:", end=' ')
+    avl.inorder(root)
+    print("\n")
+    
+    print("Preorder traversal of the AVL tree:", end=' ')
+    avl.preorder(root)
+    print("\n")
+    
+    print("Postorder traversal of the AVL tree:", end=' ')
+    avl.postorder(root)
+    print("\n")
+    
+    key_to_delete = 10
+    root = avl.delete(root, key_to_delete)
+    print(f"After deleting {key_to_delete}, Inorder traversal of the AVL tree:", end=' ')
+    avl.inorder(root)
+    print("\n")
+    
+    print("Search for key 6:", avl.search(root, 6).key)
