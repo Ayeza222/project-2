@@ -1,0 +1,5 @@
+Balance Factor Calculation:
+def get_balance(node):
+  if node is None:
+    return 0
+  return self.get_height(node.left) - self.get_height(node.right)
