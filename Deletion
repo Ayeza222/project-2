@@ -1,0 +1,5 @@
+Deletion:
+def delete(self, data):
+  self.root = self.delete_util(self.root, data)
+
+def delete_util
